@@ -1,6 +1,4 @@
 const draggables = document.querySelectorAll(".task");
-const droppables = document.querySelectorAll(".swim-lane");
-
 draggables.forEach((task) => {
   task.addEventListener("dragstart", () => {
     task.classList.add("is-dragging");
@@ -10,6 +8,7 @@ draggables.forEach((task) => {
   });
 });
 
+const droppables = document.querySelectorAll(".swim-lane");
 droppables.forEach((zone) => {
   zone.addEventListener("dragover", (e) => {
     e.preventDefault();
@@ -77,7 +76,6 @@ droppables.forEach((zone) => {
 });
 
 // Current date
-
 const dateElement = document.querySelector(".date");
 const options = { weekday: 'long', month: 'long', day: 'numeric' };
 const today = new Date();

@@ -13,6 +13,17 @@
   display: none;
 }
 
+html {
+  min-height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #0072c6 !important; /* blue background color */
+  min-height: -webkit-fill-available;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 
 header {
   display: flex;
@@ -43,11 +54,9 @@ header {
 .board {
 	
   width: 100%;
-  height: 200vh;
+  height: 150vh;
   margin: auto;
-
-  background-color: #0072c6; /* blue background color */
-  background-image: url(pw_logo.png);
+  /*background-image: url(pw_logo.png);*/
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -57,7 +66,7 @@ header {
   padding: 15px;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 38px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -75,20 +84,29 @@ header {
 	display:inline-block;
 	vertical-align:middle;
 	position: center;
-    height: 5%;
-    width: 5%;
+	max-width: 6%;
+	object-fit: cover;
+	height: auto;
    
 }
 
 .workplan .date {
-  margin-left: 95px;
-  font-size: 18px;
+  position: relative;
+  top: -20px;
+  margin-left: 125px;
+  font-size: 19px;
   font-weight: bold;
 }
 
 ---- FORM ---- 
 #todo-form {
+  position: relative;
   padding: 32px 32px 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+#todo-form.show {
+  opacity: 1;
 }
 
 #todo-form input {
@@ -130,8 +148,8 @@ header {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 16px;
-
+  gap: 80px;
+  transition: gap 0.3s ease-in-out; /* gap animation */
   padding: 24px 32px;
 
   overflow-x: auto;
@@ -190,11 +208,22 @@ header {
 }
 
 .task-desc {
-  width: 90%;
-  height: 90%;
+  display: flex;
+  width: 80%;
+  height: 80%;
   border-radius: 30px;
   border: 2px solid #ddd;
-  text-align: center; /* Add this line */
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+  color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+
+  padding: 6px;
+
+  font-size: 15px;
 }
 
 .task-desc input[type="text"] {
@@ -219,50 +248,37 @@ header {
 }
 
 .task-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 8px;
-  margin-left: auto;
-}
-
-.task-actions button {
-  background-color: #0072c6;
-  color: white;
-  border: none;
-  padding: 6px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 6px;
+  margin-left: 5px; // Edytuj - X 
   border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.task-actions button:hover {
-  background-color: #005ba1;
-}
-
-.task-actions button.edit {
-  background-color: #ffc107;
-}
-
-.task-actions button.edit:hover {
-  background-color: #e0a800;
-}
-
-.task-actions button.delete {
-  background-color: #dc3545;
-  color: white;
+  background-color: #bbb;
+  color: #fff;
   border: none;
-  padding: 6px;
-  border-radius: 4px;
-  font-size: 16px;
   cursor: pointer;
-  margin-left: auto;
+  transition: background-color 0.2s ease-in-out;
+  width: 2/3;
 }
 
-.task-actions button.delete:hover {
-  background-color: #c82333;
+.task .task-actions:last-of-type {
+  margin-right: 10px;
+  position: relative;
 }
 
+.task.actions-hidden .task-actions:last-of-type {
+  margin-right: 0;
+}
+
+.task.actions-hidden .task-actions:first-of-type {
+  position: absolute;
+  right: 0;
+}
+
+
+.task-actions:hover {
+  background-color: #d32f2f;
+}
 
 
 .task.dragging {
@@ -271,9 +287,12 @@ header {
 }
 
 .task .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 32px;
   height: 32px;
-  margin-right: 8px;
   border-radius: 50%;
   background-color: #cccccc;
 }
@@ -288,17 +307,17 @@ header {
   width: 50%;
 }
 
-.task-desc {
-  background: white;
-  color: black;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-
-  padding: 6px;
-
-
-  font-size: 16px;
+#temp-lane {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.small-task {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  padding: 6px;
 }
 
 .two-columns {
