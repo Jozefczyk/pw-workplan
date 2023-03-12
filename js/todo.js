@@ -64,22 +64,27 @@ setInterval(function() {
   }
 }, 300000); // execute every 5 minutes
 
-// Character limit in inputs
-const input = document.getElementById("todo-input");
-const taskDesc = document.getElementById("task-desc");
-const inputs = document.querySelectorAll('input, textarea');
-const maxCharacters = 16;
+// Auto expand field
+function autoExpand(field) {
+  // Reset field height
+  field.style.height = 'inherit';
 
-inputs.forEach(input => {
-  input.addEventListener('input', (event) => {
-    const inputValue = event.target.value;
-    if (inputValue.length > maxCharacters) {
-      event.target.value = inputValue.slice(0, maxCharacters);
-    }
-  });
-});
+  // Get the computed styles for the field
+  var computed = window.getComputedStyle(field);
+
+  // Calculate the height
+  var height = parseInt(computed.getPropertyValue('border-top-width'), 8)
+               + parseInt(computed.getPropertyValue('padding-top'), 8)
+               + field.scrollHeight
+               + parseInt(computed.getPropertyValue('padding-bottom'), 8)
+               + parseInt(computed.getPropertyValue('border-bottom-width'), 8);
+
+  field.style.height = height + 'px';
+}
+
 
 // New Task actions and dragging
+const input = document.getElementById("todo-input");
 const form = document.getElementById("todo-form");
 form.setAttribute('spellcheck', 'false'); // Disable spellcheck
 form.addEventListener("submit", (e) => {

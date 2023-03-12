@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
 	<meta http-equiv='cache-control' content='no-cache'> 
@@ -7,7 +7,7 @@
 	<meta http-equiv='pragma' content='no-cache'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pratt & Whitney AeroPower Work Plan</title>
+    <title>Pratt & Whitney AeroPower Plan Pracy</title>
 
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
@@ -15,12 +15,6 @@
   </head>
   <body>
 	<div class="board">
-	
-		  <form id="todo-form" >
-		<input type="text" placeholder="Tekst..." id="todo-input" />
-		<button type="submit">+ Dodaj pole</button>
-	  </form>
-	  
 	
 	<header>
 	  <nav>
@@ -31,48 +25,51 @@
 		</button>
 	  </nav>
 	</header>
-	
-	  <div class="temp-lane" id="temp-lane">
-	  </div>
 
 		<div class="workplan">
 		<center><img class="avatar" src="img/pratt-logo-small.png" alt="">PLAN PRACY</center> <span class="date"></span>
 		</div>
-		<!--<div class="zmiany"><h3 class="heading"><center>ZMIANY</center></h3></div>-->
+		
+				  <form id="todo-form" >
+		<input type="text" placeholder="Tekst..." id="todo-input" />
+		<button type="submit">+ Dodaj pole</button>
+	  </form>
+	  	  <div class="temp-lane" id="temp-lane">
+	  </div>
 		<div class="lanes">
 		  <div class="leader" id="leader1">
-		  <div class="swim-lane zmiana" id="todo-lane">
+		  <div class="swim-lane" id="todo-lane">
 			<center><h4 class="heading2">ZMIANA</h1></center><h3 class="heading"><center>Waldemar Boguń</center></h3>
 
 			<p class="task" draggable="true" id="task1"><img class="avatar" src="https://i.pravatar.cc/150?img=1" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+			<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task2"><img class="avatar" src="https://i.pravatar.cc/150?img=2" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task3"><img class="avatar" src="https://i.pravatar.cc/150?img=3" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task4"><img class="avatar" src="https://i.pravatar.cc/150?img=4" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task5"><img class="avatar" src="https://i.pravatar.cc/150?img=5" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task6"><img class="avatar" src="https://i.pravatar.cc/150?img=6" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task7"><img class="avatar" src="https://i.pravatar.cc/150?img=7" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task8"><img class="avatar" src="https://i.pravatar.cc/150?img=8" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task9"><img class="avatar" src="https://i.pravatar.cc/150?img=9" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task10"><img class="avatar" src="https://i.pravatar.cc/150?img=10" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 
 		  </div>
@@ -82,34 +79,34 @@
 		  <div class="swim-lane zmiana" id="todo-lane">
 			<center><h4 class="heading2">ZMIANA</h1></center><h3 class="heading"><center>Krzysztof Zegar</center></h3>
 			<p class="task" draggable="true" id="task11"><img class="avatar" src="https://i.pravatar.cc/150?img=11" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task12"><img class="avatar" src="https://i.pravatar.cc/150?img=12" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task13"><img class="avatar" src="https://i.pravatar.cc/150?img=13" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task14"><img class="avatar" src="https://i.pravatar.cc/150?img=14" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task15"><img class="avatar" src="https://i.pravatar.cc/150?img=15" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task16"><img class="avatar" src="https://i.pravatar.cc/150?img=16" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task17"><img class="avatar" src="https://i.pravatar.cc/150?img=17" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task18"><img class="avatar" src="https://i.pravatar.cc/150?img=18" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task19"><img class="avatar" src="https://i.pravatar.cc/150?img=19" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 			<p class="task" draggable="true" id="task20"><img class="avatar" src="https://i.pravatar.cc/150?img=20" alt="">Monter
-			<input type="text" class="task-desc" placeholder="Opis zadania" value="" />
+						<textarea rows="1" class="task-desc" oninput="autoExpand(this)" placeholder="Opis zadania"/></textarea>
 			</p>
 
 
