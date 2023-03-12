@@ -52,10 +52,11 @@ header {
 }
 
 .board {
-	padding-top: 2vh;
+	padding-top: 16vh; /* main padding */
 	display: table-cell;
 	width:100%; 
 	vertical-align: middle;
+	transition: padding 0.3s ease-in-out; /* animation */
 }
 
 .workplan {

@@ -26,13 +26,16 @@ function hideTempButtons() {
   
 }
 
+const board = document.querySelector(".board");
 const lanes = document.querySelector(".lanes");
-const gapValue = getComputedStyle(lanes).getPropertyValue('gap'); // Get current CSS gap value between lanes
+const gapValue = getComputedStyle(lanes).getPropertyValue("gap"); // Get current CSS gap value between lanes
+const paddingTop = getComputedStyle(board).getPropertyValue("paddingTop"); // Get current CSS paddingTop value
 const hamburgerButton = document.getElementById("hamburger-button");
 const tempLane = document.getElementById("temp-lane");
 hamburgerButton.addEventListener("click", () => {
   if (todoForm.style.display === "none") {
 	lanes.style.gap = "0.42vh"; // Set editing mode gap value
+	board.style.paddingTop = "0vh";
     document.body.style.overflow = "auto";
     todoForm.style.display = "block";
     tempLane.style.display = "block";
@@ -42,6 +45,7 @@ hamburgerButton.addEventListener("click", () => {
 	hHidden = false;
   } else {
 	lanes.style.gap = gapValue; // Return to previous gap
+	board.style.paddingTop = paddingTop;
     document.body.style.overflow = "hidden";
     todoForm.style.display = "none";
     tempLane.style.display = "none";
