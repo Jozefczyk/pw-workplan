@@ -1,12 +1,12 @@
-// Hide add form, leaders & assemblers at the beginning
+// Hide stuff at the beginning
+document.body.style.overflow = "hidden";
+var hHidden = true;
 const todoForm = document.getElementById("todo-form");
 todoForm.style.display = "none";
 const leader1 = document.getElementById("leader1");
 const leader2 = document.getElementById("leader2");
 leader1.style.display = "none";
 leader2.style.display = "none";
-document.body.style.overflow = "hidden";
-var hHidden = true;
 
 function hideTempButtons() {
   const tasks = document.querySelectorAll(".task");
@@ -15,8 +15,8 @@ function hideTempButtons() {
     const editButton = task.querySelector(".task-actions:last-of-type");
     if (removeButton && editButton) {
       if (removeButton.style.display === "none") {
-        removeButton.style.display = "inline-block"; // change to inline-block
-        editButton.style.display = "inline-block"; // change to inline-block
+        removeButton.style.display = "inline-block";
+        editButton.style.display = "inline-block";
       } else {
         removeButton.style.display = "none";
         editButton.style.display = "none";
@@ -27,7 +27,7 @@ function hideTempButtons() {
 }
 
 const lanes = document.querySelector(".lanes");
-const gapValue = getComputedStyle(lanes).getPropertyValue('gap'); // Get CSS gap value between lanes
+const gapValue = getComputedStyle(lanes).getPropertyValue('gap'); // Get current CSS gap value between lanes
 const hamburgerButton = document.getElementById("hamburger-button");
 const tempLane = document.getElementById("temp-lane");
 hamburgerButton.addEventListener("click", () => {

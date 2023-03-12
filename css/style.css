@@ -52,14 +52,10 @@ header {
 }
 
 .board {
-	
-  width: 100%;
-  height: 150vh;
-  margin: auto;
-  /*background-image: url(pw_logo.png);*/
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
+	padding-top: 2vh;
+	display: table-cell;
+	width:100%; 
+	vertical-align: middle;
 }
 
 .workplan {
@@ -91,8 +87,8 @@ header {
 
 .workplan .date {
   position: relative;
-  top: -1.5vh;
-  margin-left: 11.8vh;
+  top: -2vh;
+  margin-left: 20vh;
   font-size: 2vh;
   font-weight: bold;
 }
@@ -180,11 +176,9 @@ header {
 
 
 .swim-lane {
-display: inline-block;
-  vertical-align: top;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   gap: 1.2vh;
 
   background: #f4f4f4;
@@ -192,7 +186,7 @@ display: inline-block;
 
   padding: 0.14vh;
   border-radius: 0.43vh;
-  width: 24.27vh;
+  width: 28vh;
   min-height: 27vh;
 
   flex-shrink: 0;
@@ -203,24 +197,23 @@ display: inline-block;
   background: white;
   color: black;
   box-shadow: 0vh 0.53vh 1.61vh rgba(0, 0, 0, 0.25);
-  padding: 0.64vh;
-  border-radius: 4.31vh;
+  border-radius: 2.5vh;
   font-size: 1.94vh;
   cursor: move;
   height: auto;
-  width: 95%;
-  margin-left: 0.75vh;
-  flex-direction: column;
+  width: 90%;
   justify-content: center;
   align-items: center; 
   text-align: center;
+ 
 }
 
 .task textarea {
 	position:relative;
 	top:0.30vh;
 	margin-bottom: 0.64vh;
-	font-size: 1.72vh;
+	margin-right: 0.64vh;
+	font-size: 1.84vh;
 	font-weight: 500;
 }
 
@@ -230,19 +223,19 @@ display: inline-block;
 
 .task-desc {
   display: flex;
-  width: 95%;
+  width: 90%;
   
   border-radius: 0.86vh;
-  border: 0.161vh solid #e9e9e9;
-
+  border: 0.4vh solid #e9e9e9;
+  margin-left: 0.5vh;
   justify-content: center;
   align-items: center;
   text-align: center;
   background: white;
   color: black;
-  /*	box-shadow: 0vh 0.53vh 1.61vh rgba(0, 0, 0, 0.25);*/
+  /*box-shadow: 0vh 0.53vh 1.61vh rgba(0, 0, 0, 0.25);*/
 
-  font-size: 1.61vh;
+  font-size: 1.5vh;
   resize: vertical; /* allows the user to resize the field vertically */
   resize: none; /* disable resizing with mouse */
 }
@@ -307,6 +300,7 @@ display: inline-block;
   border-radius: 50%;
   background-color: #cccccc;
   margin-bottom:0.53vh; /* margin betwen name and the avatar */
+  margin-right: 0.45vh;
 }
 
 .task .name {
