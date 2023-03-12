@@ -32,7 +32,7 @@ const hamburgerButton = document.getElementById("hamburger-button");
 const tempLane = document.getElementById("temp-lane");
 hamburgerButton.addEventListener("click", () => {
   if (todoForm.style.display === "none") {
-	lanes.style.gap = "4px"; // Set editing mode gap value
+	lanes.style.gap = "0.42vh"; // Set editing mode gap value
     document.body.style.overflow = "auto";
     todoForm.style.display = "block";
     tempLane.style.display = "block";
@@ -138,6 +138,7 @@ form.addEventListener("submit", (e) => {
 
   newTask.addEventListener("dragend", () => {
     newTask.classList.remove("is-dragging");
+	newTask.classList.remove("small-task"); 
     newTask.classList.add("task");
   });
 
