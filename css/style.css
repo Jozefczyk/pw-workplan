@@ -170,13 +170,13 @@ header {
 }
 
 .heading2 {
-  top:1vh;
+  top: 1vh;
   font-size: 1.6vh;
   font-weight: bold;
 }
 
 
-.swim-lane {
+.swim-lane { /* white column */
   display: flex;
   flex-direction: column;
   align-items: center;
